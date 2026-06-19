@@ -2,13 +2,6 @@ import os
 import tweepy
 from gradio_client import Client
 
-for k in ["X_API_KEY", "X_API_SECRET", "X_ACCESS_TOKEN", "X_ACCESS_SECRET"]:
-    v = os.environ.get(k)
-    if v is None:
-        print(k, "MISSING")
-    else:
-        print(k, "len:", len(v), "| stripped:", len(v.strip()))
-
 # 1. generate a tweet from your Space
 space = Client("iloveworldpeace/tweetbot", token=os.environ["HF_TOKEN"])
 tweet_text = space.predict(0.9, 1, api_name="/generate")
