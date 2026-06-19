@@ -4,7 +4,7 @@ from gradio_client import Client
 
 # 1. ask your Space for one tweet
 client = Client("iloveworldpeace/tweetbot")
-result = client.generate(temperature=0.9, num-tweets=1, api_name="/generate",)
+result = client.predict(temperature=0.9, num-tweets=1, api_name="/generate",)
 tweet_text = tweet_text.strip()[:280]                    # stay under X's limit
 
 # 2. post it
