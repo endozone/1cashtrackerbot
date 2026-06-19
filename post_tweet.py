@@ -7,6 +7,8 @@ space = Client("iloveworldpeace/tweetbot", token=os.environ["HF_TOKEN"])
 tweet_text = space.predict(0.9, 1, api_name="/generate")
 tweet_text = tweet_text.strip()[:280]                    # stay under X's limit
 
+print(client.get_me())
+
 # 2. post it
 client = tweepy.Client(
     consumer_key=os.environ["X_API_KEY"],
