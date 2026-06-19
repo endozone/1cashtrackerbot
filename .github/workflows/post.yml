@@ -2,7 +2,7 @@ name: Post a tweet
 
 on:
   schedule:
-    - cron: "*/45 * * * *"  
+    - cron: "*/35 * * * *"  
   workflow_dispatch:           # adds a manual "Run" button for testing
 
 jobs:
