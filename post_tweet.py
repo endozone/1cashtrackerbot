@@ -4,7 +4,7 @@ from gradio_client import Client
 
 # 1. generate a tweet from your Space
 space = Client("iloveworldpeace/tweetbot", token=os.environ["HF_TOKEN"])
-tweet_text = space.predict(0.9, 1, api_name="/generate")
+tweet_text = space.predict(0.8, 1, api_name="/generate")
 tweet_text = tweet_text.strip()[:280]
 
 # 2. set up the X client
